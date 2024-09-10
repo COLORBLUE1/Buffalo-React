@@ -7,30 +7,31 @@ import {
   Contenedormain,
 } from "../assets/style/stylecomponets/styled.js";
 import { useNavigate } from "react-router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Infoinicial() {
   const navigate = useNavigate(); // Hook de navegación
 
   const [content, setContent] = useState({
     tittle: "Workout",
-    parrafo: "Start training with usand build muscle or lose weight",
+    parrafo: "Start training with us and build muscle or lose weight",
     img: "https://res.cloudinary.com/dehpi4905/image/upload/v1725495706/Buffalo%20app/Banner%20registrer/MEN3.jpg",
   });
 
   const [clickCount, setClickCount] = useState(0);
 
+  useEffect(() => {
+    if (clickCount === 3) {
+      navigate("/singin");
+    }
+  }, [clickCount, navigate]);
+
   const hadleclicks = () => {
-    //  Llame a setClickCount para controlar los mensajes que se muestran del arreglo "contenido"
     setClickCount((prevCount) => {
       const newCount = prevCount + 1;
       const newIndex = newCount % Contenidoone.length;
 
-      if (newCount === 3) {
-        navigate("/singin");
-      } else {
-        setContent(Contenidoone[newIndex]);
-      }
+      setContent(Contenidoone[newIndex]);
       return newCount;
     });
   };
