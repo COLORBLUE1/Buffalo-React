@@ -24,12 +24,12 @@ CONSIDERACIONES TÉCNICAS
 7. Debe tener inicio de sesión con Google y Facebook<br><br>
 8. Uso de rutas públicas y privadas<br><br>
 9. Establecer enrutamiento dinámico con React-router<br><br>
-10.Implementar Formik y Yup<br><br>
-11.CRUD con Firestore (agregar, listar, editar, eliminar, también buscar) (NO USO DE API`S)<br><br>
-12.Realizar el Deploy con Firebase.<br><br>
-13.Investigar e implementar reglas de seguridad con Firebase.<br><br>
-14.Debe hacer el diseño responsive.<br><br>
-15.Las imágenes den ser cargadas a través de la ejecución de POST, a un servidor
+10. Implementar Formik y Yup<br><br>
+11. CRUD con Firestore (agregar, listar, editar, eliminar, también buscar) (NO USO DE API`S)<br><br>
+12. Realizar el Deploy con Firebase.<br><br>
+13. Investigar e implementar reglas de seguridad con Firebase.<br><br>
+14. Debe hacer el diseño responsive.<br><br>
+15. Las imágenes den ser cargadas a través de la ejecución de POST, a un servidor
 (Clodinary)<br><br>
 
 # Screenshot
