@@ -1,10 +1,10 @@
-# 👋🏼 Bienvenid@ a Frontend y Sprint 2 
+# 👋🏼 Bienvenid@ a Frontend y Sprint 3
 
 <h3 align="center"><strong>!Bienvenidos a nuestro Campo de Entrenamiento Frontend Geek 🤖,  estamos muy a gusto en que seas parte de nuestra comunidad y poder apoyarte en tu crecimiento profesional en el maravilloso mundo del desarrollo del software!</strong></h3>
 
 En este Sprint a realizar vas a evidenciar los conceptos para adquirir los conocimientos esenciales en React JS para convertirte en un desarrollador web. 
 
-# 🎯 Objetivo del Sprint 2:
+# 🎯 Objetivo del Sprint 3:
 
 Adquirir los conocimientos esenciales para realizar SPA (single page application) en React JS. 
 
