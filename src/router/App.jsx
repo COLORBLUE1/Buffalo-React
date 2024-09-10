@@ -17,7 +17,7 @@ export function App() {
         <Route path="/informacion" element={<Infoinicial />} />
         <Route path="/singin" element={<Singing />} />
         <Route path="/crearcuenta" element={<Createaccount />} />
-        <Route path="/SingUn" element={<SingUn />} />
+        <Route path="/singUn" element={<SingUn />} />
         <Route path="/phone" element={<Phone />} />
 
         {/* Ruta de error */}

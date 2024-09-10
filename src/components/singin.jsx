@@ -73,7 +73,7 @@ export function Singing() {
         </LoginGF>
       </Contenedortwe>
       <h4>
-        D’ont have an account ? <Link to={"/SingUn"}>Sign In</Link>
+        D’ont have an account ? <Link to={"/singUn"}>Sign In</Link>
       </h4>
     </Contenedormain>
   );
