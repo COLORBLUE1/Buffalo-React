@@ -23,9 +23,8 @@ Con el Sprint 2 se pretende que los beneficiarios tengan los conceptos esenciale
 
 # Screenshot
 
-[![Fire-Shot-Capture-1669-FOOD-DELIVERY-food-delivery-lovat-delta-vercel-app.png](https://i.postimg.cc/sXyfNqsp/Fire-Shot-Capture-1669-FOOD-DELIVERY-food-delivery-lovat-delta-vercel-app.png)](https://postimg.cc/McP8cscT)
+[![Screenshot-2024-09-10-182832.png](https://i.postimg.cc/GpxRJCyV/Screenshot-2024-09-10-182832.png)](https://postimg.cc/gwj1m14H)
 
-[![Fire-Shot-Capture-1672-FOOD-DELIVERY-food-delivery-lovat-delta-vercel-app.png](https://i.postimg.cc/SQnQt6p1/Fire-Shot-Capture-1672-FOOD-DELIVERY-food-delivery-lovat-delta-vercel-app.png)](https://postimg.cc/dDKKhT3G)
 
 # React + Vite
 
