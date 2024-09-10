@@ -1,8 +1,6 @@
 # 👋🏼 Bienvenid@ a Frontend y Sprint 3
 
-<h3 align="center"><strong>Aplicación Buffalomobileapp
-
-A continuación, se describen las consideraciones técnicas que se deben tener
+<h3 align="center"><strong>Aplicación Buffalomobileapp A continuación, se describen las consideraciones técnicas que se deben tener
 en cuenta para brindar solución al producto a entregar para cumplir con el
 proyecto de Sprint 3</strong></h3>
 
@@ -17,8 +15,7 @@ Con el Sprint 2 se pretende que los beneficiarios tengan los conceptos esenciale
 # 📚 Contenido - Temáticas
 
 CONSIDERACIONES TÉCNICAS
-1. Crear un repositorio en GitHub, donde se evidencia que planificó y desarrolló a
-través de un proyecto de Kanban desglosando cada actividad a través de issues.<br><br>
+1. Crear un repositorio en GitHub, donde se evidencia que planificó y desarrolló a través de un proyecto de Kanban desglosando cada actividad a través de issues.<br><br>
 2. Realizar un Readme Profesional<br><br>
 3. Debe hacer uso de JS React, Redux. React Hooks, Typescripts<br><br>
 4. Implementar el ciclo de Redux con Middlewares y dispatcher<br><br>
@@ -28,8 +25,7 @@ través de un proyecto de Kanban desglosando cada actividad a través de issues.
 8. Uso de rutas públicas y privadas<br><br>
 9. Establecer enrutamiento dinámico con React-router<br><br>
 10.Implementar Formik y Yup<br><br>
-11.CRUD con Firestore (agregar, listar, editar, eliminar, también buscar) (NO USO
-DE API`S)<br><br>
+11.CRUD con Firestore (agregar, listar, editar, eliminar, también buscar) (NO USO DE API`S)<br><br>
 12.Realizar el Deploy con Firebase.<br><br>
 13.Investigar e implementar reglas de seguridad con Firebase.<br><br>
 14.Debe hacer el diseño responsive.<br><br>
