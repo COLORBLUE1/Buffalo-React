@@ -1,5 +1,5 @@
 import { Contenedormain } from "../assets/style/stylecomponets/styled.js";
-import { Mainhome } from "./Home/Mainhome.jsx";
+import { Mainhome } from "./Home/home.jsx";
 
 export function Home() {
   return (
