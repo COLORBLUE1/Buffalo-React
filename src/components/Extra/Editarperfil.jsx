@@ -1,14 +1,23 @@
-import React, { useState } from "react";
-import { Avatar } from "@mui/material";
+import { useState } from "react";
+import { Avatar, Button } from "@mui/material";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom"; // Importar useNavigate
+import { Opcionmain } from "../Blocks/Menuscroll";
+import {
+  Boton,
+  Contenedorinput,
+  Contenedormain,
+  TextField,
+} from "../../assets/style/stylecomponets/styled";
 
 const PerfilContainer = styled.div`
+  background-color: #1f233e;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  padding-top: 50px;
+  color: #fff;
 `;
 
 const FormGroup = styled.div`
@@ -21,14 +30,10 @@ const Input = styled.input`
   width: 100%;
 `;
 
-const Button = styled.button`
-  padding: 10px;
-  font-size: 16px;
-  margin: 5px;
-`;
-
 const AvatarWrapper = styled.div`
   margin-bottom: 20px;
+  display: grid;
+  justify-items: center;
 `;
 
 export function Editarperfil() {
@@ -36,7 +41,8 @@ export function Editarperfil() {
 
   // Inicializar el estado con los datos del localStorage
   const initialName = localStorage.getItem("name") || "";
-  const initialAvatar = localStorage.getItem("avatar") || "/static/images/avatar/1.jpg";
+  const initialAvatar =
+    localStorage.getItem("avatar") || "/static/images/avatar/1.jpg";
 
   // Estados para manejar los datos del perfil
   const [name, setName] = useState(initialName);
@@ -72,35 +78,70 @@ export function Editarperfil() {
   };
 
   return (
-    <PerfilContainer>
+    <Contenedormain>
       <AvatarWrapper>
+        <h4>Account</h4>
         <Avatar
           alt="User Avatar"
           src={avatar}
           sx={{ width: 100, height: 100 }}
         />
       </AvatarWrapper>
+
+      <div>
+        <Button
+          variant="contained"
+          sx={{
+            width: 40,
+            lineHeight: 1,
+            height: 40,
+            background: "#2E3562",
+            borderRadius: 10,
+            margin: (0, 2),
+          }}
+          disableElevation
+        >
+          28
+        </Button>
+        <Button
+          variant="contained"
+          sx={{
+            width: 40,
+            lineHeight: 1,
+            height: 40,
+            background: "#2E3562",
+            borderRadius: 10,
+            margin: (0, 2),
+          }}
+          disableElevation
+        >
+          178
+        </Button>
+        <Button
+          variant="contained"
+          sx={{
+            width: 40,
+            lineHeight: 1,
+            height: 40,
+            background: "#2E3562",
+            borderRadius: 10,
+            margin: (0, 2),
+          }}
+          disableElevation
+        >
+          28
+        </Button>
+      </div>
+
       <form onSubmit={handleSubmit}>
-        <FormGroup>
-          <label htmlFor="name">Name:</label>
-          <Input
-            id="name"
-            type="text"
-            value={newName}
-            onChange={handleNameChange}
-          />
-        </FormGroup>
-        <FormGroup>
-          <label htmlFor="avatar">Change Avatar:</label>
-          <Input
-            id="avatar"
-            type="file"
-            accept="image/*"
-            onChange={handleAvatarChange}
-          />
-        </FormGroup>
-        <Button type="submit">Save Changes</Button>
+        <Contenedorinput>
+          <TextField type="email" placeholder="Email" />
+          <TextField type="password" placeholder="Password" />
+        </Contenedorinput>
+        
       </form>
-    </PerfilContainer>
+      <Boton>Comenzar</Boton>
+    </Contenedormain>
+     
   );
 }

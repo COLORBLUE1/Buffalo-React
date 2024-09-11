@@ -7,11 +7,15 @@ import { Createaccount } from "../components/Createaccount";
 import { Error } from "../components/Blocks/Error";
 import { Phone } from "../components/phone";
 import { Home } from "../components/Home/home";
+import { Editarperfil } from "../components/Extra/Editarperfil";
 
 export function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/*Ruta al home*/}
+        <Route path="/home" element={<Home />} />
+
         {/*Rutas antes del Home*/}
         <Route path="/" element={<SplashScreen />} />
         <Route path="/informacion" element={<Infoinicial />} />
@@ -23,8 +27,8 @@ export function App() {
         {/* Ruta de error */}
         <Route path="*" element={<Error />} />
 
-        {/*Ruta al home*/}
-        <Route path="/home" element={<Home />} />
+           {/*Rutas extra*/}
+           <Route path="/cuenta" element={<Editarperfil />} />
       </Routes>
     </BrowserRouter>
   );

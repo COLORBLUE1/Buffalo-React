@@ -4,21 +4,50 @@ import {
   Noty,
   Perfilcontenedor,
 } from "../../assets/style/stylecomponets/styled";
-import { imgpruebas } from "../const";
 import { Avatar } from "@mui/material";
-import userSlice from "../../redux/slices/userSlice";
+import { useSelector } from "react-redux";
+import { useState } from "react";
+import Burger from "./MenuAppVar/Burger";
+import Menu from "./MenuAppVar/Menu";
+import React from "react";
+import ReactDOM from "react-dom";
+
+const useOnClickOutside = (ref, handler) => {
+  React.useEffect(() => {
+    const listener = (event) => {
+      if (!ref.current || ref.current.contains(event.target)) return;
+      handler(event);
+    };
+    document.addEventListener("mousedown", listener);
+
+    return () => {
+      document.removeEventListener("mousedown", listener);
+    };
+  }, [ref, handler]);
+};
+
 export function Navbar() {
+  const user = useSelector((store) => store.user);
+
+  const [open, setOpen] = React.useState(false);
+  const node = React.useRef();
+  useOnClickOutside(node, () => setOpen(false));
 
   return (
     <Perfilcontenedor>
-    <Avatar alt="Remy Sharp" src={imgpruebas} />
-    <div>
-      <h4>Hi</h4>
-      <p>{userSlice.displayName}</p>
-    </div>
-    <Noty>
-      <BiSolidBellRing />
-    </Noty>
-  </Perfilcontenedor>
+      <div ref={node}>
+        <Burger open={open} setOpen={setOpen} />
+        <Menu open={open} setOpen={setOpen} />
+       
+      </div>
+    
+      <div>
+        <h4>Hi!</h4>
+        <p>{user.displayName}</p>
+      </div>
+      <Noty>
+        <BiSolidBellRing />
+      </Noty>
+    </Perfilcontenedor>
   );
 }

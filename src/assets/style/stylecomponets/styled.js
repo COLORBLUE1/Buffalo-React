@@ -346,29 +346,3 @@ export const Contenedorinfo = styled.div`
   gap: 10px;
   align-items: center;
 `;
-
-//menu cuenta
-
-export const Contenedormenucuenta = styled.div`
-  display: grid;
-  padding: 30px;
-  gap: 20px;
-`;
-
-export const Option = styled.button`
-  display: flex;
-  justify-content: space-between;
-  background: #f0f0f0;
-  border: none;
-  padding: 10px;
-  width: 100%;
-  border-radius: 10px;
-  align-items: center;
-  cursor: pointer;
-`;
-
-export const Contenido = styled.span`
-  display: flex;
-  align-items: center;
-  gap: 10px;
-`;

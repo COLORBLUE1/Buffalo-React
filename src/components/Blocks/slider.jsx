@@ -74,7 +74,7 @@ export const Carrusel = () => {
               <p>Before training, be sure to warm up, give it 5 - 10 minutes</p>
             </div>
             <div>
-              <img src={imgpruebas} alt="" />
+              <img src="https://res.cloudinary.com/dehpi4905/image/upload/v1726020590/Buffalo%20app/Extra/prbvakdyqe9iavktr7n2.png" alt="" />
             </div>
           </Cardslider>
         </Button>
@@ -95,7 +95,7 @@ export const Carrusel = () => {
               <p>Before training, be sure to warm up, give it 5 - 10 minutes</p>
             </div>
             <div>
-              <img src={imgpruebas} alt="" />
+              <img src="https://res.cloudinary.com/dehpi4905/image/upload/v1726020590/Buffalo%20app/Extra/prbvakdyqe9iavktr7n2.png" alt="" />
             </div>
           </Cardslider>
         </Button>
@@ -116,7 +116,7 @@ export const Carrusel = () => {
               <p>Before training, be sure to warm up, give it 5 - 10 minutes</p>
             </div>
             <div>
-              <img src={imgpruebas} alt="" />
+              <img src="https://res.cloudinary.com/dehpi4905/image/upload/v1726020590/Buffalo%20app/Extra/prbvakdyqe9iavktr7n2.png" alt="" />
             </div>
           </Cardslider>
         </Button>

@@ -9,29 +9,3 @@
   src: url("../../Font/Raleway/Raleway-VariableFont_wght.ttf");
 }
 
-
-.input-container {
-  text-align: center;
-  background-color: #222;
-  color: #fff;
-  padding: 20px;
-}
-
-input[type="number"] {
-  width: 50px;
-  text-align: center;
-  border: none;
-  background-color: transparent;
-  color: #fff;
-  font-size: 24px;
-}
-
-.unit {
-  font-size: 16px;
-  margin-left: 5px;
-}
-
-/* Líneas azules debajo de los números seleccionados */
-.selected {
-  border-bottom: 2px solid #007bff;
-}

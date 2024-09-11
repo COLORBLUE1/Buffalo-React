@@ -20,23 +20,26 @@ import {
   googleLogin,
   setUser,
 } from "../redux/slices/userSlice.js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Home } from "./Home/home.jsx";
 export function Singing() {
   const [count, setCount] = useState(0);
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
-
+  const navigate = useNavigate();
   const handleAuth = async (value) => {
     switch (value) {
       case "Google":
         await googleLogin().then((user) => {
           dispatch(setUser(user));
+          user.isAuthenticated ? navigate("/home") : null;
         });
         break;
       case "Facebook":
         await facebookLogin().then((user) => {
           dispatch(setUser(user));
+          user.isAuthenticated ? navigate("/home") : null;
         });
         break;
 
@@ -50,7 +53,6 @@ export function Singing() {
       <Contenedoricon>
         <Img src={Logo} alt="logo de la app" />
         <h3>Sing in {user.displayName}</h3>
-
         <Contenedorinput>
           <TextField type="email" placeholder="Email" />
           <TextField type="password" placeholder="Password" />
