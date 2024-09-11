@@ -1,10 +1,10 @@
 import { Contenedormain } from "../assets/style/stylecomponets/styled.js";
-import { Mainhome } from "./Home/home.jsx";
+import { Home } from "../components/Home/home.jsx";
 
-export function Home() {
+export function Main() {
   return (
     <Contenedormain>
-      <Mainhome />
+      <Home />
     </Contenedormain>
   );
 }

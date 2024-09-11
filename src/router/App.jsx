@@ -3,10 +3,10 @@ import { SplashScreen } from "../components/SplasScreen";
 import { Infoinicial } from "../components/Infoinicial";
 import { Singing } from "../components/Singin";
 import { SingUn } from "../components/singUn";
-import { Home } from "../components/Home";
 import { Createaccount } from "../components/Createaccount";
 import { Error } from "../components/Blocks/Error";
 import { Phone } from "../components/phone";
+import { Home } from "../components/Home/home";
 
 export function App() {
   return (
