@@ -11,6 +11,8 @@ import Burger from "./MenuAppVar/Burger";
 import Menu from "./MenuAppVar/Menu";
 import React from "react";
 import ReactDOM from "react-dom";
+import styled from 'styled-components';
+
 
 const useOnClickOutside = (ref, handler) => {
   React.useEffect(() => {

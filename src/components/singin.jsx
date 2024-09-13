@@ -11,6 +11,7 @@ import {
   Contenedorinput,
   Boton,
 } from "../assets/style/stylecomponets/styled.js";
+import { onAuthStateChanged } from "firebase/auth";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -19,15 +20,34 @@ import {
   facebookLogin,
   googleLogin,
   setUser,
+  mailLogin,
 } from "../redux/slices/userSlice.js";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Home } from "./Home/home.jsx";
+import { auth } from "../firebase/firebaseConfig.js";
+import useForm from "../hooks/useForm.js";
+
+
+
 export function Singing() {
-  const [count, setCount] = useState(0);
   const dispatch = useDispatch();
   const user = useSelector((store) => store.user);
   const navigate = useNavigate();
+
+  const [formValues, handleInputChange, reset] = useForm({
+    email: "",
+    password: "",
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await mailLogin(formValues.email, formValues.password).then((response) => {
+      dispatch(setUser(response));
+    });
+
+    reset();
+  };
+
   const handleAuth = async (value) => {
     switch (value) {
       case "Google":
@@ -48,16 +68,49 @@ export function Singing() {
     }
   };
 
+  useEffect(() => {
+    const validateUserState = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        dispatch(
+          setUser({
+            displayName: user.displayName,
+            email: user.email,
+            photoURL: user.photoURL,
+            isAuthenticated: true,
+          })
+        );
+      }
+    });
+
+    return () => validateUserState();
+  }, [dispatch, user]);
+
   return (
     <Contenedormain>
       <Contenedoricon>
         <Img src={Logo} alt="logo de la app" />
         <h3>Sing in {user.displayName}</h3>
         <Contenedorinput>
-          <TextField type="email" placeholder="Email" />
-          <TextField type="password" placeholder="Password" />
+          <form onSubmit={handleSubmit}>
+            <TextField
+              style={{ margin: 10 }}
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formValues.email}
+              onChange={handleInputChange}
+            />
+            <TextField
+              style={{ margin: 10 }}
+              type="password"
+              name="password"
+              value={formValues.password}
+              onChange={handleInputChange}
+              placeholder="Password"
+            />
+          </form>
         </Contenedorinput>
-        <Boton>Comenzar</Boton>
+        <Boton type="submit">Comenzar</Boton>
         <a href="#">Forgot Password ?</a>
       </Contenedoricon>
       <Contenedortwe>

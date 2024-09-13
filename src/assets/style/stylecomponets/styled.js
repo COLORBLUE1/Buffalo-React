@@ -153,7 +153,7 @@ export const Parrafos = styled.p`
   font-size: clamp(1.25rem, 0.804rem + 1.19vw, 1.875rem);
   text-align: center;
   padding: 10px;
-
+  
   //animacion
 
   animation: fadeInUp;
@@ -283,66 +283,8 @@ export const Card = styled.div`
   align-items: center;
 `;
 
-export const Portadacard = styled.img`
-  width: 150px;
-  height: 130px;
-  border-radius: 10px 20px 70px 10px;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 0 190%);
-`;
-
-export const Textcard = styled.div`
+export const Contenedorcard = styled.div`
+  display: flex;
+  flex-wrap: wrap; // Para manejar múltiples tarjetas
   padding: 20px;
-`;
-
-export const Titulocard = styled.h2`
-  font-size: 20px;
-  margin: 0;
-`;
-
-export const Horariocard = styled.p`
-  font-size: 15px;
-`;
-
-export const Preciocard = styled.p`
-  font-size: 10px;
-`;
-
-//Resiente styled
-
-export const Contenedorordenes = styled.div`
-  display: flex;
-  cursor: pointer;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-export const Titleordenes = styled.h2`
-  text-align: center;
-`;
-
-export const Titlerestaurante = styled.h4`
-  text-align: center;
-  margin: 0;
-`;
-
-export const Precionrecientes = styled.p`
-  margin: 0;
-`;
-
-export const Datosrecientes = styled.p``;
-
-export const Contenedornlacerecientes = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-export const Enlacerecientes = styled.div`
-  color: #ffe031;
-`;
-
-export const Contenedorinfo = styled.div`
-  display: flex;
-  gap: 10px;
-  align-items: center;
 `;

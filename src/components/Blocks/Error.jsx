@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { imgpruebas } from '../const';
 
 
 
@@ -18,7 +19,7 @@ export const Error = () => {
       <div className="not-found-page">
         <div className="message">
           <h1>Esa ruta no existe</h1>
-          <img src="/path-to-your-animated-character.gif" alt="Character" className="animated-character" />
+          <img src={imgpruebas} alt="Character" className="animated-character" />
         </div>
       </div>
     );

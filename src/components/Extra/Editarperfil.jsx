@@ -9,6 +9,7 @@ import {
   Contenedormain,
   TextField,
 } from "../../assets/style/stylecomponets/styled";
+import { Header } from "../Blocks/Header";
 
 const PerfilContainer = styled.div`
   background-color: #1f233e;
@@ -79,8 +80,8 @@ export function Editarperfil() {
 
   return (
     <Contenedormain>
+      <Header volver="/home" app="Account" />
       <AvatarWrapper>
-        <h4>Account</h4>
         <Avatar
           alt="User Avatar"
           src={avatar}
@@ -138,10 +139,8 @@ export function Editarperfil() {
           <TextField type="email" placeholder="Email" />
           <TextField type="password" placeholder="Password" />
         </Contenedorinput>
-        
       </form>
       <Boton>Comenzar</Boton>
     </Contenedormain>
-     
   );
 }

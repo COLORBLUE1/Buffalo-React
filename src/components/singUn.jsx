@@ -14,8 +14,28 @@ import {
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebook } from "react-icons/fa";
 import { Checkbox, FormControlLabel } from "@mui/material";
+import { mailRegister, setUser } from "../redux/slices/userSlice.js";
+import { useDispatch } from "react-redux";
+import useForm from "../hooks/useForm.js";
 
 export function SingUn() {
+  const dispatch = useDispatch();
+  const [formValues, handleInputChange, reset] = useForm({
+    name: "",
+    email: "",
+    photoURL: "",
+    password: "",
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await mailRegister(formValues).then((response) => {
+      dispatch(setUser(response));
+    });
+
+    reset();
+  };
+
   return (
     <Contenedormain>
       <Contenedoricon>
@@ -23,10 +43,32 @@ export function SingUn() {
         <h3>Sing in</h3>
 
         <Contenedorinput>
-          <TextField type="text" placeholder="Full name" />
-          <TextField type="Email" placeholder="Email" />
-        <TextField type="" placeholder="Phone" />
-          <TextField id="last" type="password" placeholder="Password" />
+          <form onSubmit={handleSubmit}>
+            <TextField style={{margin: 10}}
+              type="text"
+              placeholder="Full name"
+              name="name"
+              value={formValues.name}
+              onChange={handleInputChange}
+            />
+            <TextField style={{margin: 10}} type="Email" placeholder="Email" />
+            <TextField style={{margin: 10}}
+              type=""
+              placeholder="Phone"
+              name="photoURL"
+              value={formValues.photoURL}
+              onChange={handleInputChange}
+            />
+            <TextField style={{margin: 10}}
+              id="last"
+              type="password"
+              name="password"
+              value={formValues.password}
+              onChange={handleInputChange}
+              placeholder="Password"
+            />
+            <Boton type="submit">Registration</Boton>
+          </form>
         </Contenedorinput>
         <Spancont>
           <FormControlLabel
@@ -39,7 +81,6 @@ export function SingUn() {
             labelPlacement="start"
           />
         </Spancont>
-        <Boton>Registration</Boton>
       </Contenedoricon>
       <Contenedortwe>
         <LoginGF>

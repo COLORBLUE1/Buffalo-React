@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import "../../../assets/style/css/Font.css";
 import { Link } from "react-router-dom";
+
+
+
+
 const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
@@ -50,18 +54,18 @@ export const Menu = ({ open }) => {
           {" "}
           <h4>Settings</h4>
         </Link>
-        <Link to="">
+        <Link to="/noty">
           {" "}
           <h4>Notification</h4>
         </Link>
-        <Link to="">
+        <Link to="/activity">
           <h4>Activity</h4>
         </Link>
         <Link to="">
           {" "}
           <h4>Subscription type</h4>
         </Link>
-        <Link to="">
+        <Link to="/faq">
           {" "}
           <h4>FAQ</h4>
         </Link>
