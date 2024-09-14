@@ -153,7 +153,7 @@ export const Parrafos = styled.p`
   font-size: clamp(1.25rem, 0.804rem + 1.19vw, 1.875rem);
   text-align: center;
   padding: 10px;
-  
+
   //animacion
 
   animation: fadeInUp;
@@ -285,6 +285,30 @@ export const Card = styled.div`
 
 export const Contenedorcard = styled.div`
   display: flex;
-  flex-wrap: wrap; // Para manejar múltiples tarjetas
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 20px;
+`;
+
+export const Contenedordetallescard = styled.div`
+  display: grid;
+  grid-template-columns: 70% 30%;
+
+  .detalles {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    h6 {
+      color: #ffffff5c;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    div {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+  }
 `;

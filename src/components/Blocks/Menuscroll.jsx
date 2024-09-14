@@ -1,28 +1,27 @@
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
 import styled from "styled-components";
-import { PiHamburgerDuotone } from "react-icons/pi";
 import { readAsync, setExercises } from "../../redux/slices/Exercises";
 import { useDispatch, useSelector } from "react-redux";
-import { Card } from "../../assets/style/stylecomponets/styled";
 import { Cards } from "./Cards";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Boton } from "../../assets/style/stylecomponets/styled";
+import { Button } from "@mui/material";
+import { useNavigate } from "react-router";
 
-async function refreshStore() {
-  const dispatch = useDispatch();
-  const { exercises, Legs } = useSelector((store) => store.exercises);
-  const [selectedValue, setSelectedValue] = useState("");
-
+async function refreshStore(dispatch) {
   console.log("Actualizando");
-  await readAsync().then((response) => {
-    dispatch(setExercises(response));
-  });
+  const response = await readAsync();
+  dispatch(setExercises(response));
 }
 
-const handleClick = (value) => {
+const handleClick = (value, setSelectedValue, setShowCreateButton) => {
   // Aquí puedes hacer lo que necesites con el valor
   console.log("Valor del botón:", value);
-  return <Cards musculo={"Legs"} refreshStore={refreshStore} />;
+  setSelectedValue(value);
+  if (value === "Myexercises") {
+    setShowCreateButton(true); // Muestra el botón para crear ejercicios
+  } else {
+    setShowCreateButton(false); // Oculta el botón para crear ejercicios
+  }
 };
 
 export const Contenedorsroll = styled.div`
@@ -44,15 +43,31 @@ export const Contenedormainsroll = styled.div`
     gap: 10px;
   }
 `;
+
 export const Opcionmain = styled.div`
-      display: flex;
-    gap: 10px;
-    justify-content: center;
-        background: #2e3562;
-        border-radius: 50px;
-  }
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  background: #2e3562;
+  border-radius: 50px;
 `;
+
+export const Botoncrearcontent = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 export const Menuscroll = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [selectedValue, setSelectedValue] = useState("exercises");
+  const [showCreateButton, setShowCreateButton] = useState(false);
+
+  // Llama a refreshStore cuando el componente se monta
+  useEffect(() => {
+    refreshStore(dispatch);
+  }, [dispatch]);
+
   return (
     <section>
       <Contenedormainsroll>
@@ -67,6 +82,9 @@ export const Menuscroll = () => {
               borderRadius: 10,
             }}
             disableElevation
+            onClick={() =>
+              handleClick("exercises", setSelectedValue, setShowCreateButton)
+            }
           >
             Discover
           </Button>
@@ -82,12 +100,15 @@ export const Menuscroll = () => {
               color: "gray",
             }}
             disableElevation
+            onClick={() =>
+              handleClick("Myexercises", setSelectedValue, setShowCreateButton)
+            }
           >
             My workouts
           </Button>
         </Opcionmain>
 
-        <Contenedorsroll>
+        <Contenedorsroll className="animate__animated animate__bounceIn">
           <Button
             variant="contained"
             sx={{
@@ -98,7 +119,9 @@ export const Menuscroll = () => {
               borderRadius: 10,
             }}
             disableElevation
-            onClick={() => handleClick(" All body")}
+            onClick={() =>
+              handleClick("exercises", setSelectedValue, setShowCreateButton)
+            }
           >
             All body
           </Button>
@@ -114,7 +137,9 @@ export const Menuscroll = () => {
               color: "gray",
             }}
             disableElevation
-            onClick={() => handleClick("Triceps")}
+            onClick={() =>
+              handleClick("Triceps", setSelectedValue, setShowCreateButton)
+            }
           >
             Triceps
           </Button>
@@ -129,7 +154,9 @@ export const Menuscroll = () => {
               color: "gray",
             }}
             disableElevation
-            onClick={() => handleClick("Biceps")}
+            onClick={() =>
+              handleClick("Biceps", setSelectedValue, setShowCreateButton)
+            }
           >
             Biceps
           </Button>
@@ -144,7 +171,9 @@ export const Menuscroll = () => {
               color: "gray",
             }}
             disableElevation
-            onClick={() => handleClick("Breast")}
+            onClick={() =>
+              handleClick("Breast", setSelectedValue, setShowCreateButton)
+            }
           >
             Breast
           </Button>
@@ -158,7 +187,9 @@ export const Menuscroll = () => {
               borderRadius: 10,
               color: "gray",
             }}
-            onClick={() => handleClick("Back")}
+            onClick={() =>
+              handleClick("Back", setSelectedValue, setShowCreateButton)
+            }
             disableElevation
           >
             Back
@@ -173,7 +204,9 @@ export const Menuscroll = () => {
               borderRadius: 10,
               color: "gray",
             }}
-            onClick={() => handleClick("Legs")}
+            onClick={() =>
+              handleClick("Legs", setSelectedValue, setShowCreateButton)
+            }
             disableElevation
           >
             Legs
@@ -181,7 +214,30 @@ export const Menuscroll = () => {
         </Contenedorsroll>
       </Contenedormainsroll>
 
-      <Cards musculo={"Legs"} refreshStore={refreshStore} />
+      <Cards musculo={selectedValue} refreshStore={refreshStore} />
+
+      {/* Aquí está el botón para crear ejercicios */}
+      {showCreateButton && (
+        <Botoncrearcontent>
+          <Boton
+            class="animate__animated animate__backInUp"
+            variant="contained"
+            sx={{
+              minWidth: 300,
+              lineHeight: 1,
+              height: 40,
+              background: "#2E3562",
+              borderRadius: 10,
+            }}
+            disableElevation
+            onClick={() => {
+              navigate("/createexersices");
+            }}
+          >
+            Create new workout
+          </Boton>
+        </Botoncrearcontent>
+      )}
     </section>
   );
 };

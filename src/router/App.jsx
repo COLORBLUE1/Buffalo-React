@@ -12,14 +12,14 @@ import { Notificaciones } from "../components/Extra/Notificaciones/Notificacione
 import { Workoutsadded } from "../components/Extra/Notificaciones/Workoutsadded.jsx";
 import { Faq } from "../components/Extra/Faq.jsx";
 import { Activity } from "../components/Extra/Activity.jsx";
-
-
+import { Createexersices } from "../components/createexersices.jsx";
 
 export function App() {
   return (
     <BrowserRouter>
       <Routes>
         {/*Ruta al home*/}
+
         <Route path="/home" element={<Home />} />
 
         {/*Rutas antes del Home*/}
@@ -32,11 +32,11 @@ export function App() {
 
         {/* Ruta de error */}
         <Route path="*" element={<Error />} />
-
         {/*Rutas extra*/}
         <Route path="/cuenta" element={<Editarperfil />} />
         <Route path="/noty" element={<Notificaciones />} />
-        <Route path="/forkoutsadded" element={<Workoutsadded />} />
+        <Route path="/workoutsadded" element={<Workoutsadded />} />
+        <Route path="/createexersices" element={<Createexersices />} />
         <Route path="/activity" element={<Activity />} />
         <Route path="/faq" element={<Faq />} />
       </Routes>

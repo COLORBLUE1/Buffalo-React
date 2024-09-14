@@ -292,3 +292,14 @@ export const exercise = [
     }
   ]
   
+  export const Myexercises = [
+    {
+      "nombre": "Fondos en Paralelas",
+      "descripcion": "Ejercicio compuesto que trabaja el tríceps, el pecho y los hombros.",
+      "imagen": "https://example.com/images/fondos_paralelas.jpg",
+      "tiempo": "3 series de 12 repeticiones",
+      "dificultad": "Alta",
+      "estado": "free",
+      "calificacion": 5
+    }  ]
+  

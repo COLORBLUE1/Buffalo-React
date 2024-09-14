@@ -2,10 +2,8 @@ import "../../assets/style/css/Main-style.css";
 import { Sectionhome } from "../../assets/style/stylecomponets/styled";
 import { Carrusel } from "../Blocks/Slider";
 import { Contenidotwe } from "../const";
-import { Cards } from "../Blocks/Cards";
 import { Menuscroll } from "../Blocks/Menuscroll";
 import { Navbar } from "../Blocks/Navbar";
-import { Button } from "@mui/material";
 import {
   createAsync,
   readAsync,

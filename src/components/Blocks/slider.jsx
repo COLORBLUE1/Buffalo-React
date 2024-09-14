@@ -56,7 +56,7 @@ export const Cardslider = styled.div`
 export const Carrusel = () => {
   return (
     <Contenedormainsroll>
-      <Contenedorsroll>
+      <Contenedorsroll className="animate__animated animate__pulse">
         <Button
           variant="contained"
           sx={{
