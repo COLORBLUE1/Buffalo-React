@@ -1,7 +1,7 @@
 import { Sectionhome } from "../assets/style/stylecomponets/styled";
 
 import { Contenedormainsroll, Contenedorsroll, Menuscroll, Opcionmain } from "./Blocks/Menuscroll";
-import { Carrusel } from "./Blocks/Slider";
+import { Carrusel } from "./Blocks/slider";
 import { Cards } from "./Blocks/Cards";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router";

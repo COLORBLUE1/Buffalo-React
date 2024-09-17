@@ -1,4 +1,4 @@
-export const Logo =
+export const  Logo =
   "https://res.cloudinary.com/dehpi4905/image/upload/v1725494999/Buffalo%20app/Logo.png";
 
   export const imgpruebas =

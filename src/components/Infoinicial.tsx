@@ -1,6 +1,6 @@
 import "../assets/style/css/Font.css";
 import "animate.css";
-import { Contenidoone } from "./const.js";
+import { Contenidoone } from "./const";
 import {
   Boton,
   Contenedorinfodiv,

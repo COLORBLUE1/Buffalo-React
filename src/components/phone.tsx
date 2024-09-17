@@ -2,7 +2,7 @@ import "../assets/style/css/Font.css";
 import TextField from "@mui/material/TextField";
 import "../assets/style/css/Createaccount.css";
 import { useNavigate } from "react-router-dom";
-import { Contenidoone, Logo } from "./const.js";
+import { Contenidoone, Logo } from "./const";
 import "../assets/style/css/Font.css";
 import {
   Contenedormain,

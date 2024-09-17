@@ -1,6 +1,6 @@
 import "../../assets/style/css/Main-style.css";
 import { Sectionhome } from "../../assets/style/stylecomponets/styled";
-import { Carrusel } from "../Blocks/Slider";
+import { Carrusel } from "../Blocks/slider";
 import { Contenidotwe } from "../const";
 import { Menuscroll } from "../Blocks/Menuscroll";
 import { Navbar } from "../Blocks/Navbar";

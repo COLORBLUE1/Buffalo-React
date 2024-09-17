@@ -8,7 +8,8 @@ import {
   Boton
 } from '../assets/style/stylecomponets/styled.js'
 
-export function Createaccount () {
+export function Exersices () {
+
   // const { setUser } = useContext(UserContext)
   // const navigate = useNavigate()
   // const [formValues, handleInputChange, reset] = useForm({

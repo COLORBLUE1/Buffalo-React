@@ -139,8 +139,9 @@ export function Editarperfil() {
           <TextField type="email" placeholder="Email" />
           <TextField type="password" placeholder="Password" />
         </Contenedorinput>
+          <Boton>Comenzar</Boton>
       </form>
-      <Boton>Comenzar</Boton>
+    
     </Contenedormain>
   );
 }

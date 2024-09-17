@@ -13,7 +13,7 @@ export const Contenedormain = styled.div`
 export const Contenedorinfodiv = styled.div`
   display: grid;
   justify-items: center;
-  font-family: ;
+  font-family: "Roboto";
   padding: 20px;
 
   h2 {
@@ -109,7 +109,8 @@ export const TextField = styled.input`
   }
 
   &::placeholder{
-  color: #ffffff80;
+  color: #ffffff80; 
+font-family: Raleway;
   }
 `;
 
@@ -118,7 +119,7 @@ export const Svg = styled.div`
   left: 20px;
 `;
 
-export const Contenedorinput = styled.form`
+export const Contenedorinput = styled.section`
   position: relative;
   display: grid;
   gap: 20px;

@@ -11,8 +11,7 @@ import Burger from "./MenuAppVar/Burger";
 import Menu from "./MenuAppVar/Menu";
 import React from "react";
 import ReactDOM from "react-dom";
-import styled from 'styled-components';
-
+import styled from "styled-components";
 
 const useOnClickOutside = (ref, handler) => {
   React.useEffect(() => {
@@ -40,12 +39,11 @@ export function Navbar() {
       <div ref={node}>
         <Burger open={open} setOpen={setOpen} />
         <Menu open={open} setOpen={setOpen} />
-       
       </div>
-    
+
       <div>
         <h4>Hi!</h4>
-        <p>{user.displayName}</p>
+        <p>{user?.displayName || "Usuario"}</p>
       </div>
       <Noty>
         <BiSolidBellRing />
