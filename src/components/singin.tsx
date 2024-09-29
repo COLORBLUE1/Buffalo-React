@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Logo } from "./const.js";
+import { Logo } from "./const.ts";
 import "../assets/style/css/Font.css";
 import React, { useEffect } from "react";
 import {

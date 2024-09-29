@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom"; // Importa useNavigate
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {
@@ -10,7 +11,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { imgpruebas } from "../const";
+import { imgpruebas } from "../const.ts";
 import { collection, getDocs } from "firebase/firestore";
 import { firestore } from "../../firebase/firebaseConfig";
 import {
@@ -21,6 +22,7 @@ import {
 export const Cards = ({ musculo }) => {
   const [exercises, setExercises] = useState([]);
   const [loading, setLoading] = useState(true); // Estado para manejar la carga
+  const navigate = useNavigate(); // Hook para la navegación
   const musculos = musculo;
 
   console.log("Mostrando ejercicios de " + musculos);
@@ -67,6 +69,7 @@ export const Cards = ({ musculo }) => {
             className="animate__animated animate__fadeInUp"
             key={exercise.id}
             style={{ border: "none", borderRadius: 20, margin: "10px" }}
+            onClick={() => navigate(`/exercise/${exercise.id}`)} // Navegar a la página de detalles
           >
             <CardActionArea>
               <CardMedia

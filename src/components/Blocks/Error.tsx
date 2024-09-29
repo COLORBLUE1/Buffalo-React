@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { imgpruebas } from '../const.js';
+import { imgpruebas } from '../const.ts';
 
 
 

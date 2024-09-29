@@ -13,7 +13,8 @@ import { Notificaciones } from "../components/Extra/Notificaciones/Notificacione
 import { Workoutsadded } from "../components/Extra/Notificaciones/Workoutsadded.tsx";
 import { Faq } from "../components/Extra/Faq.tsx";
 import { Activity } from "../components/Extra/Activity.tsx";
-import { Createexersices } from "../components/Createexersices.tsx";
+import { Createexersices } from "../components/createexersices.tsx";
+import ExerciseDetail from "../components/ExerciseDetail.js";
 
 export function App() {
   return (
@@ -26,9 +27,11 @@ export function App() {
         <Route path="/" element={<SplashScreen />} />
         <Route path="/informacion" element={<Infoinicial />} />
         <Route path="/singin" element={<Singing />} />
-        {/* <Route path="/crearcuenta" element={<Createaccount />} /> */}
         <Route path="/signUn" element={<SignUn />} />
         <Route path="/phone" element={<Phone />} />
+
+        {/* Ruta de detalle del ejercicio con el grupo muscular */}
+        <Route path="/exercise/:muscleGroup/:id" element={<ExerciseDetail />} />
 
         {/* Ruta de error */}
         <Route path="*" element={<Error />} />

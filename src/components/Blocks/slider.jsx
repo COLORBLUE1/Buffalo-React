@@ -1,7 +1,6 @@
 import Button from "@mui/material/Button";
 import styled from "styled-components";
-import "../const.js";
-import { imgpruebas } from "../const.js";
+import { imgpruebas } from "../const.ts";
 
 export const Contenedorsroll = styled.div`
   overflow: hidden;

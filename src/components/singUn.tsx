@@ -1,4 +1,4 @@
-import { Logo } from "./const.js";
+import { Logo } from "./const.ts";
 import React from "react";
 import {
   facebookLogin,
