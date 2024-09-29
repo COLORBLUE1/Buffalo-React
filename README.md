@@ -31,6 +31,10 @@ Bienvenido a **Fitness App**, una aplicación desarrollada en React con TypeScri
 - **Integración de Carrusel**: Visualización y filtrado de retos disponibles.
 - **Estadísticas de Entrenamientos**: Registro y visualización de resultados diarios.
 
+## Pantallazos
+
+[![Screenshot-2024-09-29-120618.png](https://i.postimg.cc/W1CPKQ3M/Screenshot-2024-09-29-120618.png)](https://postimg.cc/JsNgHYjn)
+
 ## Tecnologías Utilizadas
 
 - **React**: Librería para la construcción de interfaces de usuario.
@@ -50,7 +54,7 @@ Para comenzar con el proyecto, sigue estos pasos:
 1. **Clona el repositorio**:
 
     ```bash
-    git clone https://github.com/tu_usuario/fitness-app.git
+    git clone https://github.com/COLORBLUE1/Buffalo-React
     ```
 
 2. **Navega al directorio del proyecto**:
@@ -106,7 +110,7 @@ La aplicación está diseñada para ser completamente responsive, adaptándose a
 
 ## Deploy
 
-La aplicación está desplegada en Firebase Hosting. Puedes acceder a la versión en vivo [aquí](https://tu_proyecto.web.app).
+La aplicación está desplegada en Firebase Hosting. Puedes acceder a la versión en vivo [aquí](https://buffalo-react-beta.vercel.app/).
 
 ## Contribuciones
 
