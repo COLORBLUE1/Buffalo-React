@@ -34,7 +34,7 @@ export default useExercises.reducer;
 
 export const createAsync = async (value) => {
   try {
-    const response = await addDoc(collection(firestore, "Legs"), value);
+    const response = await addDoc(collection(firestore, "exercise"), value);
     if (response) {
       console.log("Documento creado con ID: ", response.id);
       console.log(response);

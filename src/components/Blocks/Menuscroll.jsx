@@ -50,6 +50,8 @@ export const Opcionmain = styled.div`
   justify-content: center;
   background: #2e3562;
   border-radius: 50px;
+  width: clamp(21.875rem, 15.179rem + 17.857vw, 31.25rem);
+  margin: auto;
 `;
 
 export const Botoncrearcontent = styled.div`
@@ -60,7 +62,7 @@ export const Botoncrearcontent = styled.div`
 export const Menuscroll = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [selectedValue, setSelectedValue] = useState("exercises");
+  const [selectedValue, setSelectedValue] = useState("exercise");
   const [showCreateButton, setShowCreateButton] = useState(false);
 
   // Llama a refreshStore cuando el componente se monta
@@ -83,10 +85,10 @@ export const Menuscroll = () => {
             }}
             disableElevation
             onClick={() =>
-              handleClick("exercises", setSelectedValue, setShowCreateButton)
+              handleClick("exercise", setSelectedValue, setShowCreateButton)
             }
           >
-            Discover
+            Ejercicios
           </Button>
 
           <Button
@@ -104,7 +106,7 @@ export const Menuscroll = () => {
               handleClick("Myexercises", setSelectedValue, setShowCreateButton)
             }
           >
-            My workouts
+            Mis entrenamientos
           </Button>
         </Opcionmain>
 
@@ -120,7 +122,7 @@ export const Menuscroll = () => {
             }}
             disableElevation
             onClick={() =>
-              handleClick("exercises", setSelectedValue, setShowCreateButton)
+              handleClick("exercise", setSelectedValue, setShowCreateButton)
             }
           >
             All body
@@ -234,7 +236,7 @@ export const Menuscroll = () => {
               navigate("/createexersices");
             }}
           >
-            Create new workout
+            Crear nuevo entrenamiento
           </Boton>
         </Botoncrearcontent>
       )}

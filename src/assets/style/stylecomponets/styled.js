@@ -5,16 +5,18 @@ export const Contenedormain = styled.div`
   background-color: #1f233e;
   display: grid;
   justify-items: center;
-  height: 100vh;
+  height: auto;
   font-family: "Roboto";
   color: #ffffff7d;
 `;
 
 export const Contenedorinfodiv = styled.div`
-  display: grid;
-  justify-items: center;
-  font-family: "Roboto";
-  padding: 20px;
+    display: grid;
+    justify-items: center;
+    font-family: "Roboto";
+    padding: 20px;
+    align-items: center;
+    height: 90vh;
 
   h2 {
     color: white;
@@ -36,7 +38,7 @@ export const Contenedoricon = styled.div`
   align-content: center;
   justify-items: center;
   text-align: center;
-
+  
   a {
     color: #ffffff7d;
     text-decoration: none;
@@ -57,7 +59,8 @@ export const Contenedoricon = styled.div`
 `;
 
 export const Contenedortwe = styled.div`
-  color: #ffffff7d;
+  font-family: Raleway;
+  
 `;
 
 export const LoginGF = styled.div`
@@ -96,12 +99,13 @@ export const TextField = styled.input`
   background: #2E3562;
   border: none;
   max-width: 100vw;
-  width: 80vw;
+  width: clamp(21.875rem, 10.714rem + 29.762vw, 37.5rem);
   height: 40px;
   box-sizing: border-box;
   border-radius: 50px;
   padding:20px;
   color:#fff;
+  font-family: Raleway;
 
 
   &:focus-visible {|
@@ -110,7 +114,7 @@ export const TextField = styled.input`
 
   &::placeholder{
   color: #ffffff80; 
-font-family: Raleway;
+  font-family: arial;
   }
 `;
 
@@ -122,6 +126,7 @@ export const Svg = styled.div`
 export const Contenedorinput = styled.section`
   position: relative;
   display: grid;
+  justify-items: center;
   gap: 20px;
 `;
 
@@ -242,7 +247,12 @@ export const ContenedorNavber = styled.div`
 
 export const Sectionhome = styled.section`
   background-color: #1f233e;
-  max-width: 100vw;
+  max-width: 70vw;
+  margin: auto;
+
+  @media (max-width: 768px) {
+    max-width: 100vw;
+  }
 `;
 
 export const Perfilcontenedor = styled.section`
@@ -252,6 +262,7 @@ export const Perfilcontenedor = styled.section`
   align-items: center;
   gap: 10px;
   margin-bottom: 30px;
+  justify-content: center;
 
   div {
     display: grid;

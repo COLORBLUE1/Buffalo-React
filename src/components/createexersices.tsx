@@ -1,5 +1,4 @@
 import { Sectionhome } from "../assets/style/stylecomponets/styled";
-
 import { Contenedormainsroll, Contenedorsroll, Menuscroll, Opcionmain } from "./Blocks/Menuscroll";
 import { Carrusel } from "./Blocks/slider";
 import { Cards } from "./Blocks/Cards";

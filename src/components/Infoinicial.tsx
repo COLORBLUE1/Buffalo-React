@@ -13,9 +13,9 @@ export function Infoinicial() {
   const navigate = useNavigate(); // Hook de navegación
 
   const [content, setContent] = useState({
-    tittle: "Workout",
-    parrafo: "Start training with us and build muscle or lose weight",
-    img: "https://res.cloudinary.com/dehpi4905/image/upload/v1725495706/Buffalo%20app/Banner%20registrer/MEN3.jpg",
+    tittle: "Ejercicio",
+    parrafo: "Empieza a entrenar con nosotros y desarrolla músculo o adelgaza",
+    img: "https://res.cloudinary.com/dehpi4905/image/upload/v1731101572/Buffalo%20app/Banner%20registrer/bk8uxohk6xtldbbchf9d.png",
   });
 
   const [clickCount, setClickCount] = useState(0);
@@ -38,17 +38,18 @@ export function Infoinicial() {
 
   return (
     <Contenedormain>
-      <img
-        className="animate__animated animate__fadeIn"
-        src={content.img}
-        width={"100%"}
-        alt=""
-      />
       <Contenedorinfodiv>
+        <img
+          className="animate__animated animate__fadeIn"
+          src={content.img}
+          width={300}
+          alt=""
+        />
         <h2>{content.tittle}</h2>
         <p>{content.parrafo}</p>
+
+        <Boton onClick={hadleclicks}>Siguiente</Boton>
       </Contenedorinfodiv>
-      <Boton onClick={hadleclicks}>Next</Boton>
     </Contenedormain>
   );
 }

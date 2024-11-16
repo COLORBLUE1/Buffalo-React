@@ -1,5 +1,5 @@
 import { BiSolidBellRing } from "react-icons/bi";
-
+import { Link } from "react-router-dom";
 import {
   Noty,
   Perfilcontenedor,
@@ -30,6 +30,8 @@ const useOnClickOutside = (ref, handler) => {
 export function Navbar() {
   const user = useSelector((store) => store.user);
 
+const userLocal = localStorage.getItem("userInfo", name);
+
   const [open, setOpen] = React.useState(false);
   const node = React.useRef();
   useOnClickOutside(node, () => setOpen(false));
@@ -42,11 +44,14 @@ export function Navbar() {
       </div>
 
       <div>
-        <h4>Hi!</h4>
-        <p>{user?.displayName || "Usuario"}</p>
+        <h4>Hola!</h4>
+        <p>{user.displayName || "Usuario"}</p>
       </div>
+
       <Noty>
-        <BiSolidBellRing />
+        <Link to="/noty">
+          <BiSolidBellRing style={{width: 30, height: 30, color: "white"}}/>
+        </Link>
       </Noty>
     </Perfilcontenedor>
   );

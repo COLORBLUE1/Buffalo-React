@@ -27,6 +27,7 @@ import { useDispatch } from "react-redux";
 import { auth } from "../firebase/firebaseConfig.js";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { Padding } from "@mui/icons-material";
 
 // Define el esquema de validación con Yup
 const validationSchema = Yup.object({
@@ -96,21 +97,19 @@ export function Singing() {
   }, [dispatch, navigate]);
 
   return (
-    <Contenedormain>
+    <Contenedormain style={{height: "100vh"}}>
       <Contenedoricon>
         <Img src={Logo} alt="logo de la app" />
-        <h3>
-      
-          Sing in 
-        </h3>
+        <h3>Sing in</h3>
         <Contenedorinput>
           <Formik
-            initialValues={{ email: '', password: '' }}
+            initialValues={{ email: "", password: "" }}
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
+          
           >
             {({ isSubmitting }) => (
-              <Form>
+              <Form   style={{display: "grid", justifyItems: "center"}}>
                 <Field
                   as={TextField}
                   style={{ margin: 10 }}
@@ -129,16 +128,17 @@ export function Singing() {
                   error={<ErrorMessage name="password" />}
                   helperText={<ErrorMessage name="password" />}
                 />
-                <Boton type="submit" disabled={isSubmitting}>Comenzar</Boton>
+                <Boton style={{fontFamily: "Raleway"}} type="submit" disabled={isSubmitting}>
+                  Comenzar
+                </Boton>
               </Form>
             )}
           </Formik>
         </Contenedorinput>
-        <a href="#">Forgot Password ?</a>
       </Contenedoricon>
       <Contenedortwe>
         <LoginGF>
-          <h4>Sign In with </h4>
+          <h4>Ingresar con</h4>
           <div>
             <Button onClick={() => handleAuth("Google")}>
               <FcGoogle style={{ width: 40, height: 50 }} />
@@ -148,10 +148,10 @@ export function Singing() {
             </Button>
           </div>
         </LoginGF>
-      </Contenedortwe>
       <h4>
-        Don’t have an account? <Link to={"/signUn"}>Sign Up</Link>
+        ¿No tienes una cuenta? <Link style={{color: "#0062ff", textDecoration: "none"}} to={"/signUn"}>Registrarme</Link>
       </h4>
+      </Contenedortwe>
     </Contenedormain>
   );
 }

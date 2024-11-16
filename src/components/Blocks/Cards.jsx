@@ -60,7 +60,7 @@ export const Cards = ({ musculo }) => {
   return (
     <Contenedorcard>
       {loading ? (
-        <Stack sx={{ color: 'grey.500' }} spacing={2} direction="row">
+        <Stack sx={{ color: "grey.500" }} spacing={2} direction="row">
           <CircularProgress color="secondary" />
         </Stack>
       ) : (
@@ -68,7 +68,13 @@ export const Cards = ({ musculo }) => {
           <Card
             className="animate__animated animate__fadeInUp"
             key={exercise.id}
-            style={{ border: "none", borderRadius: 20, margin: "10px" }}
+            style={{
+              border: "none",
+              borderRadius: 20,
+              margin: "10px",
+              width: "clamp(21.875rem, 19.643rem + 5.952vw, 25rem)",
+              background: "#2E3562"
+            }}
             onClick={() => navigate(`/exercise/${exercise.id}`)} // Navegar a la página de detalles
           >
             <CardActionArea>
@@ -81,7 +87,6 @@ export const Cards = ({ musculo }) => {
               />
               <CardContent
                 sx={{
-                  background: "#2E3562",
                   borderRadius: "0 0 20px 20px",
                   color: "#fff",
                 }}

@@ -106,7 +106,7 @@ export function SignUn() {
   };
 
   return (
-    <Contenedormain>
+    <Contenedormain style={{height: "100vh"}}>
       <Contenedoricon>
         <Img src={Logo} alt="logo de la app" />
         <h3>Sign Up</h3>
@@ -156,7 +156,7 @@ export function SignUn() {
                   <ErrorMessage name="password" component="div" />
                 </div>
                 {formError && <div style={{ color: "red" }}>{formError}</div>}
-                <Boton type="submit">Registro</Boton>
+                <Boton style={{fontFamily: "Raleway"}} type="submit">Registro</Boton>
               </Contenedorinput>
             </Form>
           )}

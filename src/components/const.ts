@@ -23,21 +23,21 @@ export const imgpruebas: string =
 export const Contenidoone: Contenido[] = [
   {
     id: 1,
-    tittle: "Workout",
-    parrafo: "Start training with us and build muscle or lose weight",
-    img: "https://res.cloudinary.com/dehpi4905/image/upload/v1725740496/Buffalo%20app/Banner%20registrer/o0crbqxi6mcbe293pipo.jpg",
+    tittle: "Ejercicio",
+    parrafo: "Empieza a entrenar con nosotros y desarrolla músculo o adelgaza",
+    img: "https://res.cloudinary.com/dehpi4905/image/upload/v1731101572/Buffalo%20app/Banner%20registrer/bk8uxohk6xtldbbchf9d.png",
   },
   {
     id: 2,
-    tittle: "Discipline",
-    parrafo: "Develop discipline in yourself train every day",
-    img: "https://res.cloudinary.com/dehpi4905/image/upload/v1725740496/Buffalo%20app/Banner%20registrer/apvvxypnhbdhooa8raqn.jpg",
+    tittle: "Disciplina",
+    parrafo: "Desarrolla la disciplina en ti mismo, entrena todos los días.",
+    img: "https://res.cloudinary.com/dehpi4905/image/upload/v1731101571/Buffalo%20app/Banner%20registrer/uslzbrs6fqtm8b6uu46q.png",
   },
   {
     id: 3,
-    tittle: "Character",
-    parrafo: "Cultivate in you an iron character for training",
-    img: "https://res.cloudinary.com/dehpi4905/image/upload/v1725740496/Buffalo%20app/Banner%20registrer/o0crbqxi6mcbe293pipo.jpg",
+    tittle: "Personaje",
+    parrafo: "Cultiva en ti un carácter de hierro para entrenar",
+    img: "https://res.cloudinary.com/dehpi4905/image/upload/v1731101570/Buffalo%20app/Banner%20registrer/euvwv8n5o3wcc6lt9ue1.png",
   },
 ];
 

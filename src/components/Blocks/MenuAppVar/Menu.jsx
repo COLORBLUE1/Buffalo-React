@@ -10,19 +10,20 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: flex-start;
   background: #2e3562;
-  transform: ${({ open }) => (open ? "translateX(-30%)" : "translateX(-100%)")};
-  border-radius: 0 50px 50px 0;
-  height: 100%;
+  transform: ${({ open }) => (open ? "translateX(0%)" : "translateX(-100%)")};
+  border-radius: 40px;
   text-align: left;
   padding: 8rem 2rem;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  top: 50px;
+  left: 10px;
   transition: transform 0.3s ease-in-out;
   z-index: 10;
+  
 
   @media (max-width: 576px) {
-    width: 100%;
+    width: 60%;
+
   }
 
   h4 {
@@ -35,13 +36,13 @@ const StyledMenu = styled.nav`
     @media (max-width: 576px) {
       text-align: left;
       position: relative;
-      left: 40%;
-      width: 150px;
+      left: 50%;
       font-family: Raleway;
+      transform: ${({ open }) => (open ? "translateX(-30%)" : "translateX(-100%)")};
     }
 
     &:hover {
-      color: #343078;
+      color: blue;
     }
   }
 `;
@@ -52,12 +53,9 @@ export const Menu = ({ open }) => {
       <div>
         <Link to="/cuenta">
           {" "}
-          <h4>Settings</h4>
+          <h4>Ajustes de cuenta</h4>
         </Link>
-        <Link to="/noty">
-          {" "}
-          <h4>Notification</h4>
-        </Link>
+
         <Link to="/activity">
           <h4>Activity</h4>
         </Link>

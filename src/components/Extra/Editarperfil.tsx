@@ -17,6 +17,7 @@ const PerfilContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
   padding-top: 50px;
   color: #fff;
 `;
@@ -79,7 +80,7 @@ export function Editarperfil() {
   };
 
   return (
-    <Contenedormain>
+    <PerfilContainer>
       <Header volver="/home" app="Account" />
       <AvatarWrapper>
         <Avatar
@@ -138,10 +139,10 @@ export function Editarperfil() {
         <Contenedorinput>
           <TextField type="email" placeholder="Email" />
           <TextField type="password" placeholder="Password" />
-        </Contenedorinput>
           <Boton>Comenzar</Boton>
+        </Contenedorinput>
       </form>
     
-    </Contenedormain>
+    </PerfilContainer>
   );
 }
